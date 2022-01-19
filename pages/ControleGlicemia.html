@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Treatment of diabetes</title>
+  <link rel="stylesheet" href="../css/cabecalho.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/reset.css">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div id="cabecalho">
+      <img src="../img/logo.png">
+      <h1 class="titulo__principal">treatment of diabetes</h1>
+    </div>
+    <div class="containerMenu">
+      <div class="tituloMenu">
+        <a href="./sobreDiabete.html" class="linkMenu" id="sobre" style="text-decoration: none; color: inherit; color: black">Sobre diabete</a>
+        <a href="./ControleGlicemia.html" class="linkMenu" id="linkControleGlicemia" style="text-decoration: none; color: inherit; color: black">Controle de glicemia</a>
+      </div>
+    </div>
+  </header>
+  <div id="containerButtonCadastrar">
+    <button type="submit" class="buttonCadastrarGlicemia" id="cadastrarGlicemia">Cadastrar</button>
+  </div>
+  <main>
+    <div class="container__tabela">
+      <div class="containerFiltro">
+        <img src="../img/search.svg"></img>
+      <input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite a data desejada">
+    </div>
+    <div class="tabela">
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Refeição</th>
+            <th>Glicemia</th>
+            <th>Carb</th>
+            <th>Insulina - Correção</th>
+            <th>#</th>
+          </tr>
+        </thead>
+        <tbody id="tabela__info"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div class="modalContainerCadastrar">
+  <div class="modal">
+    <div class="formulario">
+      <form class="corpo__formulario">
+        <div class="iconFechar">
+          <button><img src="../img/close.svg" alt="Fechar"></button>
+        </div>
+        <label for="data">Data</label>
+        <span class="msg-erro"></span>
+        <input type="date" id="data" class="inputs">
+
+        <label>Refeição</label>
+        <div class="refeicao__tudo">
+          <div class="refeicao">
+            <select id="selectRefeicao" onchange="validaSelect()">
+              <option selected disabled value="Nenhum selecionado">Nenhum selecionado</option>
+              <option value="Café da manhã">Café da manhã</option>
+              <option value="Almoço">Almoço</option>
+              <option value="Café da tarde">Café da tarde</option>
+              <option value="Jantar">Jantar</option>
+              <option value="Lanches">Lanches</option>
+            </select>
+          </div>
+        </div>
+
+        <label for="glicemia">Glicemia</label>
+        <input type="number" id="glicemia" class="inputs" maxlength="3">
+
+        <label for="carboidrato">Carboidratos</label>
+        <input type="number" id="carboidrato" class="inputs" maxlength="3">
+
+        <label for="insulina">Insulina (correção)</label>
+        <input type="number" id="insulina" class="inputs" maxlength="3">
+
+        <button type="submit" id="adicionar__dados">Concluir</button>
+      </form>
+    </div>
+  </div>
+</div>
+<script src="../js/form.js"></script>
+<script src="../js/filtro.js"></script>
+<script src="../js/modal.js"></script>
+<script src="../js/table.js"></script>
+</body>
+</html>

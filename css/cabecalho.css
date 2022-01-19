@@ -1,0 +1,48 @@
+#cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 4rem;
+  padding-left: 2rem;
+  width: 100%;
+  color: white;
+  background: #2d3986;
+  font-family: 'Encode Sans SC', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+img {
+  width: 6rem;
+}
+
+.containerMenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tituloMenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Encode Sans SC', sans-serif;
+  border-bottom: 0.5px solid gray;
+  width: 90%;
+}
+
+.linkMenu {
+  font-size: 1.4em;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0.5em;
+  padding: 0.5em;
+  cursor: pointer;
+  border: none;
+  background: #add8e6;
+  border-radius: 0.5em;
+}
+
+.linkMenu:hover {
+  background: #82a4af;
+}
